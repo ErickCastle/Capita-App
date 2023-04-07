@@ -1,5 +1,26 @@
 <script lang="ts">
     import Header from "./Header.svelte";
+    import { onMount } from "svelte";
+    import { goto } from '$app/navigation';
+
+    function routeToPage(route: string, replaceState: boolean) {
+        goto(`/${route}`, { replaceState }) 
+    }
+
+    onMount( function() {
+        const ai_response_button = document.getElementsByClassName("AI_response")[0]
+        // console.log(ai_response_button.length)
+        if (ai_response_button){
+            ai_response_button.addEventListener('click', function() {
+                console.log("CLICKED ON BUTTON")
+                routeToPage("new", false)
+            })
+        } else {
+            console.log("PROBELMAAAAAAAAAAAAAAAAAS")
+        }
+    })
+    
+
 </script>
 
 <Header />
@@ -36,24 +57,25 @@
 
     <label>
         Current Income
-        <input type="number">
+        <input name="current-income" type="number">
     </label>
     <br>
     <label>
         Current Savings
-        <input type="number">
+        <input name="current-savings" type="number">
     </label>
     <br>
     <label>
         Investor Experience
-        <input type="number">
+        <input name="current-experience" type="number">
     </label>
     <br>
     <label>
         Financial Goals
-        <input type="text">
+        <input name="financial-goals" type="text">
     </label>
 
     <br><br>
-    <button>Submit</button>
+    
+    <button class="AI_response">Submit</button>
 </form>
