@@ -1,5 +1,30 @@
-<script lang="ts">
+<script lang="js">
     import Header from "./Header.svelte";
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        const socket_pack_back = new WebSocket(
+            "ws://localhost:5173/sent-package-frontend"
+        );
+        socket_pack_back.addEventListener("open", ()=> {
+            console.log("Opened")
+        })
+
+        // @ts-ignore
+        document.getElementsByClassName("submit-info")[0].style.pointerEvents = "auto";
+        document.body.style.bottom = "0px";
+        // @ts-ignore
+        // document.getElementById("button-1").addEventListener("click", function () {
+        //     fetch("./after-submit-procedure");
+        // });
+    });
+
+    // @ts-ignore
+    function myFunction() {
+        // @ts-ignore
+        socket_pack_back.send(JSON.stringify({ "turn_state": true }))
+    }
+
 </script>
 
 <Header />
@@ -55,5 +80,5 @@
     </label>
 
     <br><br>
-    <button>Submit</button>
+    <!-- <button class="submit-info" id="button-1" onclick="myFunction()">Submit</button> -->
 </form>

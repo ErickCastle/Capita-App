@@ -5,10 +5,11 @@ name = "pypi"
 
 [packages]
 ipykernel = "*"
+flask-sock = "*"
+python-dotenv = "*"
 
 [dev-packages]
 openai = "*"
-streamlit = "*"
 flask = "*"
 flask-cors = "*"
 
