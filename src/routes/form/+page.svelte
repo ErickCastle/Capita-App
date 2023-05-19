@@ -1,36 +1,44 @@
 <script lang="ts">
 </script>
 
-<div class="container flex justify-center mx-auto flex-col">
+<div class="container flex justify-center mx-auto flex-col p-6">
 	<form action="" method="POST">
-		<h2 class="h2">Personal Info</h2>
+		<h2 class="h2 font-bold mb-2">Personal Info</h2>
 
-		<label class="label" for="age">
+		<label class="label mb-2" for="age">
 			<span>Age</span>
 		</label>
-		<input type="number" id="age" name="age" class="input" placeholder="20" />
+		<input
+			type="number"
+			id="age"
+			name="age"
+			class="input mb-4"
+			placeholder="20"
+		/>
 
-		<label class="label" for="civilStatus">Civil Status</label>
-		<select class="select" name="civilStatus" id="civilStatus">
+		<label class="label mb-2" for="civilStatus">Civil Status</label>
+		<select class="select mb-4" name="civilStatus" id="civilStatus">
 			<option value="single">Single</option>
 			<option value="common-law">Common Law</option>
 			<option value="married">Married</option>
 			<option value="divorced">Divorced</option>
 		</select>
 
-		<label class="label" for="education">Education</label>
-		<select class="select" name="education" id="education">
+		<label class="label mb-2" for="education">Education</label>
+		<select class="select mb-4" name="education" id="education">
 			<option value="high-school">High School Diploma</option>
 			<option value="bachelor">Bachelor Degree</option>
 			<option value="master">Master Degree</option>
 			<option value="phd">PhD</option>
 		</select>
 
-		<h2 class="h2">Financial Information</h2>
+		<h2 class="h2 font-bold mb-2">Financial Information</h2>
 
-		<label class="label" for="currentIncome">
+		<label class="label mb-2" for="currentIncome">
 			<span>Current Income</span>
-			<div class="input-group input-group-divider grid-cols-[auto_1fr_auto]">
+			<div
+				class="input-group input-group-divider grid-cols-[auto_1fr_auto] mb-4"
+			>
 				<div class="input-group-shim">
 					<i class="fa-solid fa-dollar-sign" />
 				</div>
@@ -48,9 +56,11 @@
 			</div>
 		</label>
 
-		<label class="label" for="currentSavings"
+		<label class="label mb-2" for="currentSavings"
 			><span>Current Savings</span>
-			<div class="input-group input-group-divider grid-cols-[auto_1fr_auto]">
+			<div
+				class="input-group input-group-divider grid-cols-[auto_1fr_auto] mb-4"
+			>
 				<div class="input-group-shim">
 					<i class="fa-solid fa-dollar-sign" />
 				</div>
@@ -68,11 +78,13 @@
 			</div>
 		</label>
 
-		<h2 class="h2">Retirement Information</h2>
+		<h2 class="h2 font-bold mb-2">Retirement Information</h2>
 
-		<label class="label" for="retirementSpending"
+		<label class="label mb-2" for="retirementSpending"
 			><span>Retirement Spending</span>
-			<div class="input-group input-group-divider grid-cols-[auto_1fr_auto]">
+			<div
+				class="input-group input-group-divider grid-cols-[auto_1fr_auto] mb-4"
+			>
 				<div class="input-group-shim">
 					<i class="fa-solid fa-dollar-sign" />
 				</div>
@@ -90,18 +102,18 @@
 			</div>
 		</label>
 
-		<label class="label" for="retirementAge">Retirement Age</label>
+		<label class="label mb-2" for="retirementAge">Retirement Age</label>
 		<input
-			class="input"
+			class="input mb-4"
 			type="number"
 			id="retirementAge"
 			name="retirementAge"
 			placeholder="65"
 		/>
 
-		<label class="label" for="lifeExpectancy">Life Expectancy</label>
+		<label class="label mb-2" for="lifeExpectancy">Life Expectancy</label>
 		<input
-			class="input"
+			class="input mb-4"
 			type="number"
 			id="lifeExpectancy"
 			name="lifeExpectancy"

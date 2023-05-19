@@ -1,20 +1,8 @@
 <script>
 	import { Avatar } from '@skeletonlabs/skeleton';
+	import avatar from '$lib/assets/avatar.png';
+	import card_image from '$lib/assets/card_image.jpg';
 </script>
-
-<!-- <div class="card bg-initial flex justify-center items-center m-auto w-1/2 p-2">
-
-    <header class="w-full bg-initial">
-        <figure>
-            <img src="retirement_symbol.png" class="bg-white aspect-[21/9] rounded-2xl w-64 h-64" alt="">
-        </figure>
-    </header>
-
-    <div class="p-4 space-y-4 bg-slate-400 rounded-xl w-full">
-        <h6 class="h6">RETIREMENT CALCULATOR</h6>
-    </div>
-    
-</div> -->
 
 <div class="variant-filled-primary m-8 rounded-lg">
 	<a
@@ -23,29 +11,28 @@
 	>
 		<header>
 			<img
-				src="https://source.unsplash.com/vjUokUWbFOs/400x175"
-				class="bg-black/50 w-full aspect-[21/9]"
+				src={card_image}
+				class="bg-white w-full aspect-[21/9] rounded-t-lg object-cover"
 				alt="Post"
 			/>
 		</header>
-		<div class="p-4 space-y-4">
-			<h3 class="h3" data-toc-ignore>Retirement Calculator</h3>
+		<div class="p-4 space-y-4 bg-amber-200">
+			<h3 class="h3 font-bold" data-toc-ignore>Retirement Calculator</h3>
 			<article>
 				<p>
 					<!-- cspell:disable -->
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur
-					provident eveniet eligendi cumque consequatur tempore sint nisi sapiente.
-					Iste beatae laboriosam iure molestias cum expedita architecto itaque quae
-					rem.
+					Click here for accessing to our retirement AI specialist, who is going
+					to provide some calculations about the necessary savings you have to make
+					from the present, as well as some guidance based on your unique data!
 					<!-- cspell:enable -->
 				</p>
 			</article>
 		</div>
 		<hr class="opacity-50" />
 		<footer class="p-4 flex justify-start items-center space-x-4">
-			<Avatar src="https://source.unsplash.com/YOErFW8AfkI/32x32" width="w-8" />
+			<Avatar src={avatar} width="w-8" />
 			<div class="flex-auto flex justify-between items-center">
-				<h6 class="font-bold">Capita AI</h6>
+				<h6 class="font-bold">Cápita AI</h6>
 			</div>
 		</footer>
 	</a>
