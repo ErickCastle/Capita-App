@@ -1,7 +1,4 @@
 <script lang="ts">
-	import type { ActionData } from './$types';
-
-	export let form: ActionData;
 </script>
 
 <div class="container flex justify-center mx-auto flex-col">
@@ -11,10 +8,10 @@
 		<label class="label" for="age">
 			<span>Age</span>
 		</label>
-		<input type="number" id="age" name="age" class="input" />
+		<input type="number" id="age" name="age" class="input" placeholder="20" />
 
-		<label class="label" for="civil-status">Civil Status</label>
-		<select class="select" name="civil-status" id="civil-status">
+		<label class="label" for="civilStatus">Civil Status</label>
+		<select class="select" name="civilStatus" id="civilStatus">
 			<option value="single">Single</option>
 			<option value="common-law">Common Law</option>
 			<option value="married">Married</option>
@@ -31,7 +28,7 @@
 
 		<h2 class="h2">Financial Information</h2>
 
-		<label class="label" for="current-income">
+		<label class="label" for="currentIncome">
 			<span>Current Income</span>
 			<div class="input-group input-group-divider grid-cols-[auto_1fr_auto]">
 				<div class="input-group-shim">
@@ -40,46 +37,79 @@
 				<input
 					class="input"
 					type="number"
-					id="current-income"
-					name="current-income"
+					id="currentIncome"
+					name="currentIncome"
 					placeholder="Monthly Income"
 				/>
-				<select name="currency" id="currency" class="select">
+				<!-- <select name="currency" id="currency" class="select">
 					<option value="USD">USD</option>
 					<option value="DOP">DOP</option>
-				</select>
+				</select> -->
 			</div>
 		</label>
 
-		<label class="label" for="current-savings">Current Savings</label>
+		<label class="label" for="currentSavings"
+			><span>Current Savings</span>
+			<div class="input-group input-group-divider grid-cols-[auto_1fr_auto]">
+				<div class="input-group-shim">
+					<i class="fa-solid fa-dollar-sign" />
+				</div>
+				<input
+					class="input"
+					type="number"
+					id="currentSavings"
+					name="currentSavings"
+					placeholder="Total Savings"
+				/>
+				<!-- <select name="currency" id="currency" class="select">
+					<option value="USD">USD</option>
+					<option value="DOP">DOP</option>
+				</select> -->
+			</div>
+		</label>
+
+		<h2 class="h2">Retirement Information</h2>
+
+		<label class="label" for="retirementSpending"
+			><span>Retirement Spending</span>
+			<div class="input-group input-group-divider grid-cols-[auto_1fr_auto]">
+				<div class="input-group-shim">
+					<i class="fa-solid fa-dollar-sign" />
+				</div>
+				<input
+					class="input"
+					type="number"
+					id="retirementSpending"
+					name="retirementSpending"
+					placeholder="Monthly Retirement Spending"
+				/>
+				<!-- <select name="currency" id="currency" class="select">
+					<option value="USD">USD</option>
+					<option value="DOP">DOP</option>
+				</select> -->
+			</div>
+		</label>
+
+		<label class="label" for="retirementAge">Retirement Age</label>
 		<input
 			class="input"
 			type="number"
-			id="current-savings"
-			name="current-savings"
+			id="retirementAge"
+			name="retirementAge"
+			placeholder="65"
 		/>
 
-		<label class="label" for="investor-experience">Investor Experience</label>
+		<label class="label" for="lifeExpectancy">Life Expectancy</label>
 		<input
 			class="input"
 			type="number"
-			id="investor-experience"
-			name="investor-experience"
-		/>
-
-		<label class="label" for="financial-goals">Investor Experience</label>
-		<input
-			class="input"
-			type="number"
-			id="financial-goals"
-			name="financial-goals"
+			id="lifeExpectancy"
+			name="lifeExpectancy"
+			placeholder="95"
 		/>
 
 		<br />
 
 		<button type="submit" class="btn variant-filled">Submit</button>
 	</form>
-
-	<h3 class="h3">Answer:</h3>
-	<textarea class="textarea">{form?.answer}</textarea>
 </div>

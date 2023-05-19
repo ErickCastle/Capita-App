@@ -16,7 +16,7 @@
     
 </div> -->
 
-<div class="m-auto w-1/2 p-2">
+<div class="variant-filled-primary m-8 rounded-lg">
 	<a
 		class="card bg-initial card-hover overflow-hidden"
 		href="/dashboard/retirement/chat"
@@ -29,8 +29,7 @@
 			/>
 		</header>
 		<div class="p-4 space-y-4">
-			<h6 class="h6">Announcements</h6>
-			<h3 class="h3" data-toc-ignore>Skeleton is Awesome!</h3>
+			<h3 class="h3" data-toc-ignore>Retirement Calculator</h3>
 			<article>
 				<p>
 					<!-- cspell:disable -->
@@ -46,8 +45,7 @@
 		<footer class="p-4 flex justify-start items-center space-x-4">
 			<Avatar src="https://source.unsplash.com/YOErFW8AfkI/32x32" width="w-8" />
 			<div class="flex-auto flex justify-between items-center">
-				<h6 class="font-bold">By Alex</h6>
-				<small>On {new Date().toLocaleDateString()}</small>
+				<h6 class="font-bold">Capita AI</h6>
 			</div>
 		</footer>
 	</a>
