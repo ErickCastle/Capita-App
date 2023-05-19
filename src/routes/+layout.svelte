@@ -6,7 +6,7 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 	import { AppShell } from '@skeletonlabs/skeleton';
-	import Header from '$lib/components/Header.svelte';
+	import Header from '$lib/components/Header/Header.svelte';
 </script>
 
 <AppShell>

@@ -34,7 +34,9 @@
 		<label class="label" for="current-income">
 			<span>Current Income</span>
 			<div class="input-group input-group-divider grid-cols-[auto_1fr_auto]">
-				<div class="input-group-shim">$</div>
+				<div class="input-group-shim">
+					<i class="fa-solid fa-dollar-sign" />
+				</div>
 				<input
 					class="input"
 					type="number"
